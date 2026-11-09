@@ -13,13 +13,10 @@ import {
   UsersIcon,
   MapPinIcon,
   ChevronRightIcon,
-  AwardIcon,
   CheckCircleIcon,
   UtensilsIcon,
   EyeIcon,
-  SlidersIcon,
   MessageSquareIcon,
-  PhoneIcon,
   ShieldCheckIcon,
   StarIcon,
   PlayIcon,
@@ -28,13 +25,12 @@ import {
 export function meta({}: Route.MetaArgs) {
   return [
     {
-      title:
-        "Shiraz | Imperial Wedding Halls, Shiraz Arena & Royal Catering (shiraz.pk)",
+      title: "Wedding Halls & Catering in Peshawar | Shiraz",
     },
     {
       name: "description",
       content:
-        "Welcome to Shiraz Hospitality Group (shiraz.pk). Experience Peshawar's most prestigious wedding venues: Shiraz Arena, Shiraz Gathering glasshouse marquees, and 35 years of royal Peshawari culinary mastery.",
+        "Plan a wedding or celebration in Peshawar with Shiraz. Explore our venues, check available dates and discover Peshawari catering.",
     },
     {
       name: "keywords",
@@ -73,57 +69,41 @@ export default function Home() {
 
   return (
     <div className="pt-20">
-      {/* 1. NATURAL LUXURY HERO SECTION WITH RIGHT-HAND VISUAL SHOWCASE */}
-      <section className="relative min-h-[92vh] flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#fdfcfa] via-[#faf6ee] to-[#faf8f5] py-12 lg:py-20">
-        {/* Subtle background texture */}
-        <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
-          <img
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85"
-            alt="Shiraz Luxury Wedding Hall"
-            className="w-full h-full object-cover filter contrast-125"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#faf8f5] via-[#faf6ee]/90 to-transparent" />
-        </div>
+      {/* 1. LUMINOUS LUXURY LIGHT HERO SECTION */}
+      <section className="relative flex flex-col justify-center overflow-hidden bg-gradient-to-b from-[#fdfcfa] via-[#faf6ee] to-[#faf8f5] text-zinc-900 py-14 sm:py-16 lg:py-20 border-b border-amber-200/60">
+        <div
+          aria-hidden="true"
+          className="absolute -top-20 right-0 h-[28rem] w-[28rem] rounded-full bg-amber-100/70 blur-3xl pointer-events-none"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute bottom-0 -left-24 h-80 w-80 rounded-full bg-amber-100/60 blur-3xl pointer-events-none"
+        />
 
-        {/* Ambient decorative glowing light spots */}
-        <div className="absolute top-1/4 -right-20 w-96 h-96 bg-amber-200/30 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-10 -left-20 w-80 h-80 bg-amber-300/20 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full my-auto space-y-10 sm:space-y-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full my-auto space-y-12">
           {/* Main Hero Split Grid: Left Text & CTAs, Right Image Showcase */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Column: Headlines, Narrative & CTAs (6 or 7 Cols) */}
-            <div className="lg:col-span-6 xl:col-span-7 space-y-6">
-              {/* Royal Pill Badge */}
+            <div className="md:col-span-7 lg:col-span-6 space-y-6 lg:space-y-7">
+              {/* Official Shiraz Group Brand Pill Badge */}
+              <div className="inline-flex items-center gap-2 text-sm font-medium tracking-wide text-amber-900">
+                <span className="h-px w-8 bg-amber-600" />
+                <span>Peshawar hospitality, since 1990</span>
+              </div>
 
               {/* Natural Hero Headlines */}
-              <div className="space-y-4">
-                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 leading-[1.1]">
-                  Where Royal Legacies Meet{" "}
-                  <span className="gold-text-gradient block mt-1">
-                    Modern Architectural Grandeur
+              <div className="space-y-5">
+                <h1 className="font-serif text-4xl sm:text-5xl xl:text-6xl font-medium tracking-tight text-zinc-900 leading-[0.98]">
+                  A beautiful place for{" "}
+                  <span className="text-amber-800 italic">
+                    life’s biggest moments.
                   </span>
                 </h1>
 
-                <p className="font-serif text-lg sm:text-xl text-zinc-700 max-w-2xl font-light leading-relaxed">
-                  Welcome to{" "}
-                  <strong className="text-amber-900 font-semibold">
-                    Shiraz
-                  </strong>
-                  . Step into Peshawar’s most prestigious celebrations across
-                  the 35ft crystal ballroom of{" "}
-                  <strong className="text-amber-900 font-semibold">
-                    Shiraz Arena
-                  </strong>
-                  , the romantic glasshouse of{" "}
-                  <strong className="text-amber-900 font-semibold">
-                    Shiraz Gathering
-                  </strong>
-                  , and the 35-year gourmet heritage of{" "}
-                  <strong className="text-amber-900 font-semibold">
-                    Shiraz Ronaq
-                  </strong>
-                  .
+                <p className="font-sans text-base sm:text-lg text-zinc-600 max-w-xl leading-8">
+                  From grand celebrations at Shiraz Arena to intimate gatherings
+                  in our glasshouse, we bring thoughtful hospitality, beautiful
+                  spaces and much-loved Peshawari cooking together.
                 </p>
               </div>
 
@@ -131,119 +111,109 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-3 pt-1">
                 <Link
                   to="/booking"
-                  className="px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-amber-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 shadow-md shadow-amber-400/25 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+                  className="px-6 py-3.5 rounded-full text-sm font-semibold text-white bg-zinc-900 hover:bg-amber-900 shadow-lg shadow-zinc-900/10 transition-colors flex items-center gap-2 cursor-pointer"
                 >
-                  <SparklesIcon className="w-4 h-4 text-amber-950" />
-                  <span>Launch Automated Booking</span>
+                  <span>Plan your celebration</span>
+                  <ChevronRightIcon className="w-4 h-4" />
                 </Link>
 
                 <button
                   onClick={() => setIsTourModalOpen(true)}
-                  className="px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-zinc-800 bg-white border border-amber-300 hover:bg-amber-50 shadow-sm transition-all flex items-center gap-2 group cursor-pointer"
+                  className="px-5 py-3.5 rounded-full text-sm font-semibold text-zinc-700 bg-white/80 border border-zinc-200 hover:border-amber-400 hover:text-amber-900 transition-colors flex items-center gap-2 group cursor-pointer"
                 >
-                  <EyeIcon className="w-4 h-4 text-amber-700 group-hover:scale-110 transition-transform" />
-                  <span>360° Virtual Hall Tour</span>
+                  <EyeIcon className="w-4 h-4 text-amber-700" />
+                  <span>Take a virtual tour</span>
                 </button>
 
                 <Link
                   to="/visualizer"
-                  className="px-5 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-amber-900 hover:text-amber-950 hover:bg-amber-100/60 transition-all flex items-center gap-1.5"
+                  className="px-3 py-3.5 text-sm font-semibold text-amber-900 hover:text-amber-950 transition-colors flex items-center gap-1.5"
                 >
-                  <span>3D Layout Planner</span>
+                  <span>Explore layouts</span>
                   <ChevronRightIcon className="w-4 h-4" />
                 </Link>
               </div>
 
               {/* VIP Trust & Credibility Badges */}
-              <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-zinc-600 border-t border-amber-200/60">
+              <div className="pt-5 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-zinc-600 border-t border-amber-200/80">
                 <div className="flex items-center gap-2">
-                  <div className="flex text-amber-500">
+                  <div className="flex text-amber-600">
                     {[...Array(5)].map((_, i) => (
-                      <StarIcon key={i} className="w-3.5 h-3.5" />
+                      <StarIcon key={i} className="w-3.5 h-3.5 fill-current" />
                     ))}
                   </div>
-                  <span className="font-bold text-zinc-900">4.9 / 5.0</span>
-                  <span className="text-zinc-500 font-serif italic">
-                    (348+ verified weddings)
-                  </span>
+                  <span className="font-semibold text-zinc-900">4.9 / 5</span>
+                  <span className="text-zinc-500">from 348+ celebrations</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-zinc-700 font-medium">
-                  <ShieldCheckIcon className="w-4 h-4 text-emerald-600" />
-                  <span>Triple 500kVA Zero Load-Shedding</span>
+                <div className="flex items-center gap-2 text-zinc-600">
+                  <ShieldCheckIcon className="w-4 h-4 text-emerald-700" />
+                  <span>Triple 500 kVA backup power</span>
                 </div>
               </div>
             </div>
 
             {/* Right Column: High-Impact Luxury Visual Showcase (5 or 6 Cols) */}
-            <div className="lg:col-span-6 xl:col-span-5 relative space-y-3.5">
+            <div className="md:col-span-5 lg:col-span-6 relative space-y-3">
               {/* Main Visual Showcase Card */}
-              <div className="relative rounded-none overflow-hidden border-2 border-amber-300/90 shadow-2xl shadow-amber-900/15 aspect-[4/3] sm:aspect-[16/11] bg-zinc-900 group">
+              <div className="relative rounded-[1.75rem] overflow-hidden border border-white shadow-2xl shadow-zinc-900/15 aspect-[4/3] bg-zinc-900 group">
                 <img
                   src={currentVenue.image}
                   alt={currentVenue.name}
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 filter brightness-95"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
 
-                {/* Top-Left Live Status Pill */}
-                <div className="absolute top-3.5 left-3.5 bg-zinc-950/80 backdrop-blur-md px-3 py-1 rounded-none border border-emerald-400/40 flex items-center gap-2 text-[11px] text-emerald-300 font-semibold shadow-md">
-                  <span className="w-2 h-2 rounded-none bg-emerald-400 animate-ping"></span>
-                  <span>Open for 2026/2027 Booking</span>
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full flex items-center gap-2 text-xs text-zinc-800 font-medium shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                  <span>2026–27 dates open</span>
                 </div>
 
-                {/* Top-Right Venue Badge */}
-                <div className="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md px-3 py-1 rounded-none border border-amber-300/90 shadow-md flex items-center gap-1.5 text-[11px] text-amber-950 font-bold">
-                  <CrownIcon className="w-3.5 h-3.5 text-amber-700" />
-                  <span>{currentVenue.badges[0] || "Signature Hall"}</span>
+                <div className="absolute top-4 right-4 bg-zinc-950/65 backdrop-blur px-3 py-1.5 rounded-full text-white text-xs font-medium">
+                  {currentVenue.badges[0] || "Shiraz venue"}
                 </div>
 
-                {/* Center 360 Virtual Tour Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <button
                     type="button"
                     onClick={() => setIsTourModalOpen(true)}
-                    className="pointer-events-auto p-3.5 rounded-none bg-white/90 hover:bg-white text-amber-950 shadow-2xl border-2 border-amber-400 hover:scale-105 active:scale-95 transition-all group/btn flex items-center gap-2 backdrop-blur-md cursor-pointer"
+                    className="pointer-events-auto p-3 rounded-full bg-white/95 hover:bg-white text-zinc-900 shadow-xl hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
                     title="Open 360° Virtual Tour"
                   >
-                    <div className="w-7 h-7 rounded-none bg-gradient-to-r from-amber-400 to-amber-500 flex items-center justify-center text-amber-950">
+                    <span className="w-9 h-9 rounded-full bg-amber-400 flex items-center justify-center text-zinc-950">
                       <PlayIcon className="w-4 h-4 ml-0.5" />
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-wider pr-2 hidden sm:inline">
-                      View 360° Tour
+                    </span>
+                    <span className="text-sm font-semibold pr-2 hidden sm:inline">
+                      Take a look inside
                     </span>
                   </button>
                 </div>
 
-                {/* Bottom Overlay Info Card */}
-                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-none border border-amber-200/90 shadow-xl space-y-1.5">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-[10px] font-mono font-bold uppercase text-amber-800 tracking-wider block">
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl space-y-3">
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="min-w-0">
+                      <span className="text-[11px] font-medium text-amber-800 tracking-wide block">
                         {currentVenue.subtitle}
                       </span>
-                      <h3 className="font-display font-bold text-sm sm:text-base text-zinc-900 truncate">
+                      <h3 className="font-display font-bold text-base sm:text-lg text-zinc-900 truncate">
                         {currentVenue.name}
                       </h3>
                     </div>
                     <div className="text-right shrink-0">
-                      <span className="text-xs sm:text-sm font-bold text-amber-900 block font-mono">
+                      <span className="text-sm font-semibold text-zinc-900 block">
                         ₨ {currentVenue.baseHallRent.toLocaleString()}
                       </span>
-                      <span className="text-[9px] text-zinc-500 uppercase">
-                        Base Hall Rental
+                      <span className="text-[10px] text-zinc-500">
+                        Starting hall rent
                       </span>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between text-[11px] text-zinc-600 pt-1.5 border-t border-zinc-100">
-                    <span className="flex items-center gap-1.5 font-medium">
+                  <div className="flex items-center justify-between text-xs text-zinc-600 pt-3 border-t border-zinc-200">
+                    <span className="flex items-center gap-1.5">
                       <UsersIcon className="w-3.5 h-3.5 text-amber-700" />
-                      <span>
-                        {currentVenue.capacityMin} - {currentVenue.capacityMax}{" "}
-                        Guests
-                      </span>
+                      {currentVenue.capacityMin}–{currentVenue.capacityMax} guests
                     </span>
-                    <span className="text-amber-900 font-serif italic text-xs">
+                    <span className="text-zinc-500">
                       {currentVenue.dimensions}
                     </span>
                   </div>
@@ -251,7 +221,7 @@ export default function Home() {
               </div>
 
               {/* Interactive Venue Thumbnail Selector Ribbon */}
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-4 gap-2.5">
                 {VENUES.map((v) => {
                   const isSelected = v.id === selectedVenue;
                   return (
@@ -259,25 +229,21 @@ export default function Home() {
                       key={v.id}
                       type="button"
                       onClick={() => setSelectedVenue(v.id)}
-                      className={`relative rounded-none overflow-hidden border transition-all text-left p-1 group cursor-pointer ${
+                      aria-pressed={isSelected}
+                      className={`relative rounded-xl overflow-hidden border transition-all text-left p-1.5 group cursor-pointer ${
                         isSelected
-                          ? "border-amber-500 bg-amber-50 shadow-md ring-1 ring-amber-400"
-                          : "border-zinc-200 bg-white/80 hover:border-amber-300"
+                          ? "border-amber-600 bg-white shadow-sm"
+                          : "border-zinc-200/80 bg-white/70 hover:border-amber-400"
                       }`}
                     >
-                      <div className="aspect-[16/10] rounded-none overflow-hidden relative">
+                      <div className="aspect-[16/10] rounded-lg overflow-hidden relative">
                         <img
                           src={v.image}
-                          alt={v.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          alt=""
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        {isSelected && (
-                          <div className="absolute inset-0 bg-amber-500/25 flex items-center justify-center">
-                            <span className="w-2 h-2 rounded-none bg-white shadow"></span>
-                          </div>
-                        )}
                       </div>
-                      <div className="text-[10px] font-bold text-zinc-800 truncate mt-1 px-1">
+                      <div className="text-[11px] font-medium text-zinc-800 truncate mt-1.5 px-1">
                         {v.name.split("-")[0].trim()}
                       </div>
                     </button>
@@ -288,33 +254,31 @@ export default function Home() {
           </div>
 
           {/* Quick Date Availability & Automated Estimator Bar (Full Width across container) */}
-          <div className="bg-white rounded-none p-5 sm:p-7 shadow-xl shadow-amber-900/5 border-2 border-amber-200/90">
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-zinc-100 text-xs uppercase tracking-wider text-amber-900 font-bold">
-              <div className="flex items-center gap-2">
-                <CalendarIcon className="w-4 h-4 text-amber-600" />
-                <span>
-                  Instant Hall Availability & Automated Cost Estimator
-                </span>
+          <div className="bg-white/90 rounded-2xl p-5 sm:p-7 shadow-lg shadow-zinc-900/5 border border-zinc-200/80">
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-zinc-100">
+              <div className="flex items-center gap-2.5 text-zinc-900 font-semibold">
+                <CalendarIcon className="w-4 h-4 text-amber-700" />
+                <span>Find a date for your celebration</span>
               </div>
-              <span className="text-emerald-700 font-mono text-[11px] bg-emerald-50 px-2.5 py-0.5 rounded-none border border-emerald-200 hidden sm:inline font-bold">
-                ⚡ Live 2026/2027 Reservation Radar
+              <span className="text-emerald-800 text-xs bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                2026–27 dates open
               </span>
             </div>
 
             <form
               onSubmit={handleHeroSubmit}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 items-end"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end"
             >
               {/* Select Venue */}
               <div>
-                <label className="block text-[11px] font-bold uppercase tracking-wider text-zinc-600 mb-1.5">
-                  Select Venue
+                <label className="block text-xs font-medium text-zinc-600 mb-2">
+                  Venue
                 </label>
                 <div className="relative">
                   <select
                     value={selectedVenue}
                     onChange={(e) => setSelectedVenue(e.target.value)}
-                    className="w-full bg-zinc-50 border border-zinc-200 rounded-none px-3 py-2.5 text-xs text-zinc-900 focus:outline-none focus:border-amber-500 focus:bg-white appearance-none font-medium shadow-xs"
+                    className="w-full bg-white border border-zinc-200 rounded-xl px-3.5 py-3 text-sm text-zinc-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-600/15 appearance-none"
                   >
                     {VENUES.map((v) => (
                       <option
@@ -326,14 +290,14 @@ export default function Home() {
                       </option>
                     ))}
                   </select>
-                  <MapPinIcon className="w-3.5 h-3.5 text-amber-600 absolute right-3 top-3 pointer-events-none" />
+                  <MapPinIcon className="w-4 h-4 text-amber-700 absolute right-3.5 top-3.5 pointer-events-none" />
                 </div>
               </div>
 
               {/* Event Date */}
               <div>
-                <label className="block text-[11px] font-bold uppercase tracking-wider text-zinc-600 mb-1.5">
-                  Wedding Date
+                <label className="block text-xs font-medium text-zinc-600 mb-2">
+                  Event date
                 </label>
                 <input
                   type="date"
@@ -341,22 +305,23 @@ export default function Home() {
                   onChange={(e) => setSelectedDate(e.target.value)}
                   min="2026-11-10"
                   max="2027-12-31"
-                  className="w-full bg-zinc-50 border border-zinc-200 rounded-none px-3 py-2.5 text-xs text-zinc-900 focus:outline-none focus:border-amber-500 focus:bg-white font-mono shadow-xs"
+                  className="w-full bg-white border border-zinc-200 rounded-xl px-3.5 py-3 text-sm text-zinc-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-600/15"
                 />
               </div>
 
               {/* Slot */}
               <div>
-                <label className="block text-[11px] font-bold uppercase tracking-wider text-zinc-600 mb-1.5">
-                  Slot
+                <label className="block text-xs font-medium text-zinc-600 mb-2">
+                  Time
                 </label>
-                <div className="grid grid-cols-2 gap-1 bg-zinc-100 p-1 rounded-none border border-zinc-200">
+                <div className="grid grid-cols-2 gap-1 bg-zinc-100 p-1 rounded-xl border border-zinc-200">
                   <button
                     type="button"
                     onClick={() => setSelectedSlot("afternoon")}
-                    className={`py-1.5 rounded-none text-[11px] font-bold transition-all cursor-pointer ${
+                    aria-pressed={selectedSlot === "afternoon"}
+                    className={`py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
                       selectedSlot === "afternoon"
-                        ? "bg-amber-400 text-amber-950 shadow-xs"
+                        ? "bg-white text-zinc-900 shadow-sm"
                         : "text-zinc-600 hover:text-zinc-900"
                     }`}
                   >
@@ -365,9 +330,10 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => setSelectedSlot("evening")}
-                    className={`py-1.5 rounded-none text-[11px] font-bold transition-all cursor-pointer ${
+                    aria-pressed={selectedSlot === "evening"}
+                    className={`py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
                       selectedSlot === "evening"
-                        ? "bg-amber-400 text-amber-950 shadow-xs"
+                        ? "bg-white text-zinc-900 shadow-sm"
                         : "text-zinc-600 hover:text-zinc-900"
                     }`}
                   >
@@ -378,68 +344,67 @@ export default function Home() {
 
               {/* Guest Count */}
               <div>
-                <label className="block text-[11px] font-bold uppercase tracking-wider text-zinc-600 mb-1.5 flex justify-between">
+                <label className="flex justify-between text-xs font-medium text-zinc-600 mb-2">
                   <span>Guests</span>
-                  <span className="text-amber-800 font-mono font-bold">
-                    {guestCount}p
+                  <span className="text-zinc-900 tabular-nums">
+                    {guestCount}
                   </span>
                 </label>
-                <div className="relative flex items-center">
-                  <input
-                    type="range"
-                    min="150"
-                    max="2000"
-                    step="50"
-                    value={guestCount}
-                    onChange={(e) => setGuestCount(Number(e.target.value))}
-                    className="w-full accent-amber-500 cursor-pointer"
-                  />
-                </div>
+                <input
+                  type="range"
+                  min="150"
+                  max="2000"
+                  step="50"
+                  value={guestCount}
+                  onChange={(e) => setGuestCount(Number(e.target.value))}
+                  aria-label="Number of guests"
+                  className="w-full accent-amber-600 cursor-pointer"
+                />
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full py-3 px-4 rounded-none text-xs font-bold uppercase tracking-wider text-amber-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:from-amber-400 shadow-md shadow-amber-400/20 transition-all flex items-center justify-center gap-1.5 group cursor-pointer"
+                className="w-full py-3.5 px-4 rounded-xl text-sm font-semibold text-white bg-zinc-900 hover:bg-amber-900 transition-colors flex items-center justify-center gap-2 group cursor-pointer"
               >
-                <span>Check & Book</span>
-                <ChevronRightIcon className="w-4 h-4 text-amber-950 group-hover:translate-x-1 transition-transform" />
+                <span>Check availability</span>
+                <ChevronRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
           </div>
 
           {/* Proof Badges */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-amber-200/80">
-            <div className="text-center p-3.5 rounded-none bg-white/80 border border-amber-200/80 shadow-xs">
-              <div className="font-display text-2xl sm:text-3xl font-bold text-amber-800">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/75 border border-zinc-200/80">
+              <div className="font-display text-2xl sm:text-3xl font-semibold text-zinc-900">
                 35+
               </div>
-              <div className="text-xs text-zinc-600 font-medium tracking-wide uppercase mt-0.5">
-                Years Legacy
+              <div className="text-xs sm:text-sm text-zinc-600 mt-1">
+                Years in Peshawar
               </div>
             </div>
-            <div className="text-center p-3.5 rounded-none bg-white/80 border border-amber-200/80 shadow-xs">
-              <div className="font-display text-2xl sm:text-3xl font-bold text-amber-800">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/75 border border-zinc-200/80">
+              <div className="font-display text-2xl sm:text-3xl font-semibold text-zinc-900">
                 12,500+
               </div>
-              <div className="text-xs text-zinc-600 font-medium tracking-wide uppercase mt-0.5">
-                Weddings Hosted
+              <div className="text-xs sm:text-sm text-zinc-600 mt-1">
+                Celebrations hosted
               </div>
             </div>
-            <div className="text-center p-3.5 rounded-none bg-white/80 border border-amber-200/80 shadow-xs">
-              <div className="font-display text-2xl sm:text-3xl font-bold text-amber-800">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/75 border border-zinc-200/80">
+              <div className="font-display text-2xl sm:text-3xl font-semibold text-zinc-900">
                 2,500
               </div>
-              <div className="text-xs text-zinc-600 font-medium tracking-wide uppercase mt-0.5">
-                Max Guest Capacity
+              <div className="text-xs sm:text-sm text-zinc-600 mt-1">
+                Guest capacity
               </div>
             </div>
-            <div className="text-center p-3.5 rounded-none bg-white/80 border border-amber-200/80 shadow-xs">
-              <div className="font-display text-2xl sm:text-3xl font-bold text-amber-800">
-                4.9 / 5.0
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/75 border border-zinc-200/80">
+              <div className="font-display text-2xl sm:text-3xl font-semibold text-zinc-900">
+                4.9 / 5
               </div>
-              <div className="text-xs text-zinc-600 font-medium tracking-wide uppercase mt-0.5">
-                Verified Patron Rating
+              <div className="text-xs sm:text-sm text-zinc-600 mt-1">
+                Guest rating
               </div>
             </div>
           </div>
@@ -447,40 +412,40 @@ export default function Home() {
       </section>
 
       {/* 2. STORY & HERITAGE NARRATIVE SECTION */}
-      <section className="py-24 bg-white relative overflow-hidden border-t border-amber-200/60">
+      <section className="py-20 sm:py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Visual Mosaic */}
             <div className="lg:col-span-6 relative">
-              <div className="relative rounded-none overflow-hidden border-2 border-amber-200 shadow-2xl aspect-[4/3]">
+              <div className="relative rounded-[1.75rem] overflow-hidden border border-zinc-200 shadow-xl shadow-zinc-900/10 aspect-[4/3]">
                 <img
                   src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80"
-                  alt="Shiraz Royal Heritage Wedding"
+                  alt="Wedding reception with floral décor"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-amber-300 font-bold block mb-1">
+                  <span className="text-xs uppercase tracking-widest text-amber-200 font-medium block mb-2">
                     Abdara Road & Ring Road, Peshawar
                   </span>
-                  <div className="font-display text-2xl font-bold">
-                    Peshawar’s Royal Hospitality Emblem Since 1990
+                  <div className="font-serif text-2xl sm:text-3xl font-medium">
+                    A Peshawar tradition since 1990
                   </div>
                 </div>
               </div>
 
               {/* Floating Stat Card */}
-              <div className="absolute -bottom-6 -right-4 sm:right-6 bg-white rounded-none p-4 border-2 border-amber-300 shadow-xl max-w-xs">
+              <div className="absolute -bottom-6 -right-4 sm:right-6 bg-white rounded-2xl p-4 border border-zinc-200 shadow-xl max-w-xs">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-none bg-amber-100 flex items-center justify-center text-amber-800 font-bold">
+                  <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-800 font-bold">
                     <CrownIcon className="w-5 h-5 text-amber-700" />
                   </div>
                   <div>
-                    <div className="font-display font-bold text-sm text-zinc-900">
-                      Zero Load-Shedding
+                    <div className="font-semibold text-sm text-zinc-900">
+                      Backup power on site
                     </div>
-                    <div className="text-[11px] text-zinc-500">
-                      3x 500kVA Industrial Backup Generators
+                    <div className="text-xs text-zinc-500">
+                      Three 500 kVA generators
                     </div>
                   </div>
                 </div>
@@ -489,62 +454,59 @@ export default function Home() {
 
             {/* Storytelling Text */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
-                <CrownIcon className="w-3.5 h-3.5 text-amber-700" />
-                <span>The Shiraz Philosophy</span>
+              <div className="inline-flex items-center gap-2 text-sm font-medium tracking-wide text-amber-900">
+                <span className="h-px w-8 bg-amber-600" />
+                <span>A little about us</span>
               </div>
 
-              <h2 className="font-display text-3xl sm:text-5xl font-bold text-zinc-900 tracking-tight leading-tight">
-                A Half-Century Tradition of Honour, Warmth &{" "}
-                <span className="gold-text-gradient">Khyber Hospitality</span>
+              <h2 className="font-serif text-3xl sm:text-5xl font-medium text-zinc-900 tracking-tight leading-tight">
+                More than 35 years of{" "}
+                <span className="text-amber-800 italic">bringing people together.</span>
               </h2>
 
-              <p className="font-serif text-lg text-zinc-700 leading-relaxed font-light">
-                For over three decades, Shiraz has stood at the beating heart of
-                Peshawar’s most cherished celebrations. What began as an iconic
-                family culinary haven on Abdara Road has blossomed into an
-                empire of grand architectural halls and glasshouse marquees.
+              <p className="text-base sm:text-lg text-zinc-600 leading-8">
+                Shiraz began on Abdara Road with a simple idea: make every
+                gathering feel special. Today, our family of venues brings
+                together thoughtful service, welcoming spaces and the flavours
+                of Peshawar.
               </p>
 
-              <div className="space-y-3 pt-2 text-sm text-zinc-700">
+              <div className="space-y-4 pt-1 text-sm sm:text-base text-zinc-700 leading-relaxed">
                 <div className="flex items-start gap-3">
-                  <CheckCircleIcon className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircleIcon className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Pillarless Engineering:</strong> Monumental 20,000
-                    sq ft hall spaces with 35ft crystal chandelier drops that
-                    offer unhindered sightlines for every wedding guest.
+                    <strong>Room to celebrate:</strong> Spacious, pillar-free
+                    halls with clear sightlines and room for your guests.
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircleIcon className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircleIcon className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Desi Ghee & Fresh Meat Heritage:</strong> 100%
-                    organic pasture goat meat, slow-cooked in its own fat with
-                    rock salt according to 300-year-old regional traditions.
+                    <strong>Food with a sense of place:</strong> Peshawari
+                    favourites and family recipes, prepared for sharing.
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircleIcon className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircleIcon className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Bespoke Female Dignity & Segregation:</strong>{" "}
-                    Soundproof partition panels, separate private entrances, and
-                    female security/waitstaff upon request.
+                    <strong>Considered arrangements:</strong> Private entrances,
+                    partitions and female staff can be arranged on request.
                   </span>
                 </div>
               </div>
 
-              <div className="pt-4 flex items-center gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Link
                   to="/venues"
-                  className="px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-amber-950 bg-gradient-to-r from-amber-300 to-amber-500 hover:from-amber-400 shadow-sm"
+                  className="px-5 py-3 rounded-full text-sm font-semibold text-white bg-zinc-900 hover:bg-amber-900 transition-colors"
                 >
-                  Explore All 4 Halls
+                  Meet our venues
                 </Link>
                 <Link
                   to="/catering"
-                  className="px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-zinc-700 hover:text-zinc-900 border border-zinc-300 hover:bg-zinc-50"
+                  className="px-5 py-3 rounded-full text-sm font-semibold text-zinc-700 hover:text-zinc-950 border border-zinc-200 hover:border-amber-400 transition-colors"
                 >
-                  View Royal Catering Menus
+                  Explore the menu
                 </Link>
               </div>
             </div>
@@ -553,29 +515,29 @@ export default function Home() {
       </section>
 
       {/* 3. CURATED VENUES TEASER GRID */}
-      <section className="py-24 bg-[#faf8f5] relative overflow-hidden border-t border-amber-200/60">
+      <section className="py-20 sm:py-24 bg-[#faf8f5] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
-                <CrownIcon className="w-3.5 h-3.5 text-amber-700" />
-                <span>The Sovereign Collection</span>
+              <div className="inline-flex items-center gap-2 text-sm font-medium tracking-wide text-amber-900">
+                <span className="h-px w-8 bg-amber-600" />
+                <span>Find your setting</span>
               </div>
-              <h2 className="font-display text-3xl sm:text-5xl font-bold text-zinc-900 tracking-tight">
-                Our Signature{" "}
-                <span className="gold-text-gradient">Wedding Halls</span>
+              <h2 className="font-serif text-3xl sm:text-5xl font-medium text-zinc-900 tracking-tight">
+                Spaces for every{" "}
+                <span className="text-amber-800 italic">kind of celebration.</span>
               </h2>
-              <p className="font-serif text-lg text-zinc-600 font-light">
-                Tailored for grand Barat entries, romantic glasshouse Walimas,
-                and vibrant floral Mehndis.
+              <p className="text-base sm:text-lg text-zinc-600 leading-7">
+                From lively mehndis to elegant walimas, find a venue that feels
+                right for your gathering.
               </p>
             </div>
 
             <Link
               to="/venues"
-              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-900 hover:text-amber-950 py-2 border-b-2 border-amber-500 self-start md:self-auto"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-amber-900 hover:text-amber-950 py-2 self-start md:self-auto"
             >
-              <span>Compare All Venues Side-by-Side</span>
+              <span>Explore all venues</span>
               <ChevronRightIcon className="w-4 h-4" />
             </Link>
           </div>
@@ -584,7 +546,7 @@ export default function Home() {
             {VENUES.map((v) => (
               <div
                 key={v.id}
-                className="bg-white rounded-none overflow-hidden border-2 border-amber-200/90 shadow-md shadow-amber-900/5 flex flex-col justify-between group hover:border-amber-400 transition-all duration-300 hover:-translate-y-1"
+                className="bg-white rounded-2xl overflow-hidden border border-zinc-200/80 shadow-sm flex flex-col justify-between group hover:shadow-lg hover:shadow-zinc-900/5 hover:border-amber-300 transition-all duration-300"
               >
                 <div>
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -594,23 +556,23 @@ export default function Home() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <span className="absolute top-3 left-3 text-[10px] font-mono font-bold uppercase bg-white/95 text-amber-950 px-2.5 py-0.5 rounded-none border border-amber-300/80 shadow-xs">
+                    <span className="absolute top-3 left-3 text-[11px] font-medium bg-white/95 text-zinc-800 px-3 py-1 rounded-full shadow-sm">
                       {v.badges[0]}
                     </span>
-                    <span className="absolute bottom-3 left-3 text-white font-mono text-xs font-bold">
-                      {v.capacityMin} - {v.capacityMax} Guests
+                    <span className="absolute bottom-3 left-3 text-white text-xs font-medium">
+                      {v.capacityMin}–{v.capacityMax} guests
                     </span>
                   </div>
 
                   <div className="p-5 space-y-2">
-                    <h3 className="font-display font-bold text-lg text-zinc-900 group-hover:text-amber-900 transition-colors">
+                    <h3 className="font-display font-semibold text-lg text-zinc-900 group-hover:text-amber-900 transition-colors">
                       {v.name.split("-")[0]}
                     </h3>
-                    <p className="text-xs text-zinc-500 line-clamp-2 font-light">
+                    <p className="text-sm text-zinc-600 line-clamp-2">
                       {v.tagline}
                     </p>
-                    <div className="text-[11px] font-mono text-emerald-800 font-bold pt-2">
-                      Base Hall: ₨ {v.baseHallRent.toLocaleString()}
+                    <div className="text-sm text-zinc-700 pt-2">
+                      From <span className="font-semibold">₨ {v.baseHallRent.toLocaleString()}</span>
                     </div>
                   </div>
                 </div>
@@ -618,15 +580,15 @@ export default function Home() {
                 <div className="p-5 pt-0 grid grid-cols-2 gap-2 border-t border-zinc-100 mt-2">
                   <Link
                     to={`/booking?venue=${v.id}`}
-                    className="py-2.5 text-center rounded-none bg-amber-400 hover:bg-amber-300 text-amber-950 font-bold text-xs shadow-xs transition-colors"
+                    className="py-2.5 text-center rounded-xl bg-zinc-900 hover:bg-amber-900 text-white font-semibold text-sm transition-colors"
                   >
-                    Book Hall
+                    Check dates
                   </Link>
                   <Link
                     to={`/visualizer?venue=${v.id}`}
-                    className="py-2.5 text-center rounded-none bg-zinc-50 hover:bg-zinc-100 border border-zinc-200 text-zinc-700 font-bold text-xs transition-colors"
+                    className="py-2.5 text-center rounded-xl bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-700 font-semibold text-sm transition-colors"
                   >
-                    3D Layout
+                    View layout
                   </Link>
                 </div>
               </div>
@@ -641,57 +603,57 @@ export default function Home() {
       />
 
       {/* 5. GASTRONOMIC EXPERIENCE TEASER */}
-      <section className="py-24 bg-white relative overflow-hidden border-t border-amber-200/60">
+      <section className="py-20 sm:py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
-                <UtensilsIcon className="w-3.5 h-3.5 text-amber-700" />
-                <span>The Culinary Standard</span>
+              <div className="inline-flex items-center gap-2 text-sm font-medium tracking-wide text-amber-900">
+                <span className="h-px w-8 bg-amber-600" />
+                <UtensilsIcon className="w-4 h-4 text-amber-700" />
+                <span>Gather around the table</span>
               </div>
 
-              <h2 className="font-display text-3xl sm:text-5xl font-bold text-zinc-900 tracking-tight leading-tight">
-                Authentic Peshawari Dum Pukht &{" "}
-                <span className="gold-text-gradient">Royal Mughal Feasts</span>
+              <h2 className="font-serif text-3xl sm:text-5xl font-medium text-zinc-900 tracking-tight leading-tight">
+                Good food makes{" "}
+                <span className="text-amber-800 italic">a good gathering.</span>
               </h2>
 
-              <p className="font-serif text-lg text-zinc-700 leading-relaxed font-light">
-                Our kitchen is led by master ustaads who have preserved Khyber’s
-                heirloom recipes for 35 years. Every dish is seasoned
-                exclusively with pure butterfat, Himalayan rock salt, and whole
-                aromatics.
+              <p className="text-base sm:text-lg text-zinc-600 leading-8">
+                Our kitchen brings Peshawari favourites and time-honoured
+                recipes to the table, made for long conversations and second
+                helpings.
               </p>
 
-              <div className="grid grid-cols-2 gap-3 pt-2">
-                <div className="p-4 rounded-none bg-amber-50/50 border border-amber-200">
-                  <div className="font-display font-bold text-sm text-zinc-900">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div className="p-4 rounded-2xl bg-[#faf8f5] border border-zinc-200/80">
+                  <div className="font-semibold text-sm text-zinc-900">
                     Mutton Dum Pukht
                   </div>
-                  <div className="text-[11px] text-zinc-500 mt-1">
+                  <div className="text-sm text-zinc-500 mt-1">
                     Slow-sealed in dough pots for 6 hours
                   </div>
                 </div>
-                <div className="p-4 rounded-none bg-amber-50/50 border border-amber-200">
-                  <div className="font-display font-bold text-sm text-zinc-900">
+                <div className="p-4 rounded-2xl bg-[#faf8f5] border border-zinc-200/80">
+                  <div className="font-semibold text-sm text-zinc-900">
                     Shinwari Karahi
                   </div>
-                  <div className="text-[11px] text-zinc-500 mt-1">
+                  <div className="text-sm text-zinc-500 mt-1">
                     Desi ghee, fresh tomatoes & rock salt
                   </div>
                 </div>
-                <div className="p-4 rounded-none bg-amber-50/50 border border-amber-200">
-                  <div className="font-display font-bold text-sm text-zinc-900">
+                <div className="p-4 rounded-2xl bg-[#faf8f5] border border-zinc-200/80">
+                  <div className="font-semibold text-sm text-zinc-900">
                     Live Bread Tandoors
                   </div>
-                  <div className="text-[11px] text-zinc-500 mt-1">
+                  <div className="text-sm text-zinc-500 mt-1">
                     Peshawari Roghni, Taftan & Kulcha
                   </div>
                 </div>
-                <div className="p-4 rounded-none bg-amber-50/50 border border-amber-200">
-                  <div className="font-display font-bold text-sm text-zinc-900">
+                <div className="p-4 rounded-2xl bg-[#faf8f5] border border-zinc-200/80">
+                  <div className="font-semibold text-sm text-zinc-900">
                     Brass Samovars
                   </div>
-                  <div className="text-[11px] text-zinc-500 mt-1">
+                  <div className="text-sm text-zinc-500 mt-1">
                     Kashmiri chai & roasted almond qahwa
                   </div>
                 </div>
@@ -700,16 +662,16 @@ export default function Home() {
               <div className="pt-2">
                 <Link
                   to="/catering"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-none text-xs font-bold uppercase tracking-wider text-amber-950 bg-gradient-to-r from-amber-300 to-amber-500 hover:from-amber-400 shadow-md"
+                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-sm font-semibold text-white bg-zinc-900 hover:bg-amber-900 transition-colors"
                 >
-                  <SparklesIcon className="w-4 h-4 text-amber-950" />
-                  <span>Build Custom Menu & Tasting Platter</span>
+                  <SparklesIcon className="w-4 h-4" />
+                  <span>Explore catering</span>
                 </Link>
               </div>
             </div>
 
             <div className="lg:col-span-6 relative">
-              <div className="rounded-none overflow-hidden border-2 border-amber-200 shadow-xl aspect-square">
+              <div className="rounded-[1.75rem] overflow-hidden border border-zinc-200 shadow-xl shadow-zinc-900/10 aspect-square">
                 <img
                   src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80"
                   alt="Shiraz Royal Banqueting"
@@ -722,29 +684,30 @@ export default function Home() {
       </section>
 
       {/* 6. COMMUNITY VOICES & RECENT DISCUSSIONS PREVIEW */}
-      <section className="py-24 bg-[#faf8f5] relative overflow-hidden border-t border-amber-200/60">
+      <section className="py-20 sm:py-24 bg-[#faf8f5] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-none bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 text-sm font-medium tracking-wide text-amber-900">
+                <span className="h-px w-8 bg-amber-600" />
                 <MessageSquareIcon className="w-3.5 h-3.5 text-amber-700" />
-                <span>Shiraz Wedding Majlis</span>
+                <span>From our community</span>
               </div>
-              <h2 className="font-display text-3xl sm:text-5xl font-bold text-zinc-900 tracking-tight">
-                Conversations from{" "}
-                <span className="gold-text-gradient">Real Couples</span>
+              <h2 className="font-serif text-3xl sm:text-5xl font-medium text-zinc-900 tracking-tight">
+                A little advice from{" "}
+                <span className="text-amber-800 italic">people who’ve been there.</span>
               </h2>
-              <p className="font-serif text-lg text-zinc-600 font-light">
-                Recent questions, acoustics reviews, and verified planner advice
-                from our community forum.
+              <p className="text-base sm:text-lg text-zinc-600 leading-7">
+                Browse questions, recommendations and wedding-day tips shared
+                by the Shiraz community.
               </p>
             </div>
 
             <Link
               to="/discussions"
-              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-900 hover:text-amber-950 py-2 border-b-2 border-amber-500 self-start md:self-auto"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-amber-900 hover:text-amber-950 py-2 self-start md:self-auto"
             >
-              <span>Visit Full Discussions Forum</span>
+              <span>Visit the community</span>
               <ChevronRightIcon className="w-4 h-4" />
             </Link>
           </div>
@@ -753,23 +716,23 @@ export default function Home() {
             {INITIAL_DISCUSSIONS.slice(0, 2).map((post) => (
               <div
                 key={post.id}
-                className="bg-white rounded-none p-6 border-2 border-zinc-200 shadow-md shadow-amber-900/5 space-y-4 hover:border-amber-400 transition-colors"
+                className="bg-white rounded-2xl p-6 border border-zinc-200/80 shadow-sm space-y-4 hover:border-amber-300 hover:shadow-md transition-all"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-none bg-amber-100 flex items-center justify-center font-bold text-xs text-amber-900">
+                    <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center font-semibold text-sm text-amber-900">
                       {post.author[0]}
                     </div>
                     <div>
                       <div className="font-bold text-sm text-zinc-900">
                         {post.author}
                       </div>
-                      <div className="text-[10px] text-zinc-500">
+                      <div className="text-xs text-zinc-500">
                         {post.authorRole} • {post.createdAt}
                       </div>
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-amber-900 bg-amber-50 px-2.5 py-1 rounded-none border border-amber-200">
+                  <span className="text-xs font-medium text-amber-900 bg-amber-50 px-3 py-1 rounded-full border border-amber-100">
                     {post.category}
                   </span>
                 </div>
@@ -777,16 +740,16 @@ export default function Home() {
                 <h3 className="font-display font-bold text-base text-zinc-900">
                   {post.title}
                 </h3>
-                <p className="text-xs text-zinc-600 line-clamp-3 font-light leading-relaxed">
+                <p className="text-sm text-zinc-600 line-clamp-3 leading-relaxed">
                   {post.content}
                 </p>
 
                 {post.replies.length > 0 && (
-                  <div className="p-3.5 rounded-none bg-emerald-50 border border-emerald-200 text-xs">
-                    <span className="font-bold text-emerald-950 block text-[11px] mb-1">
-                      👑 {post.replies[0].author}:
+                  <div className="p-4 rounded-xl bg-[#faf8f5] border border-zinc-200 text-sm">
+                    <span className="font-semibold text-zinc-900 block text-xs mb-1">
+                      {post.replies[0].author} replied:
                     </span>
-                    <span className="text-zinc-700 line-clamp-2 font-light">
+                    <span className="text-zinc-600 line-clamp-2">
                       {post.replies[0].content}
                     </span>
                   </div>
@@ -795,9 +758,9 @@ export default function Home() {
                 <div className="pt-2 flex justify-end">
                   <Link
                     to="/discussions"
-                    className="text-xs font-bold text-amber-900 hover:text-amber-950 flex items-center gap-1"
+                    className="text-sm font-semibold text-amber-900 hover:text-amber-950 flex items-center gap-1"
                   >
-                    <span>Read Full Thread</span>
+                    <span>Read the conversation</span>
                     <ChevronRightIcon className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -814,34 +777,34 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* 9. MAJESTIC CLOSING INVITATION BANNER */}
-      <section className="py-20 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 text-amber-950 relative overflow-hidden shadow-inner">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6">
-          <div className="w-14 h-14 mx-auto rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/40 shadow-sm">
-            <CrownIcon className="w-7 h-7 text-amber-950" />
+      <section className="py-20 sm:py-24 bg-zinc-950 text-white relative overflow-hidden">
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full bg-amber-800/20 blur-3xl pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6">
+          <div className="w-12 h-12 mx-auto rounded-full bg-white/10 flex items-center justify-center border border-white/15">
+            <CrownIcon className="w-6 h-6 text-amber-300" />
           </div>
 
-          <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight">
-            Begin Your Legacy with Shiraz
+          <h2 className="font-serif text-3xl sm:text-5xl font-medium tracking-tight">
+            Let’s make it a day to remember.
           </h2>
 
-          <p className="font-serif text-lg sm:text-xl max-w-2xl mx-auto opacity-90 font-light">
-            Peak weekend dates for the 2026/2027 wedding season are reserving
-            rapidly. Initiate your automated quotation or schedule your VIP
-            walkthrough today.
+          <p className="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto leading-8">
+            Tell us what you’re planning. We’ll help you find the right space,
+            date and menu for your celebration.
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 pt-2">
             <Link
               to="/booking"
-              className="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-zinc-950 hover:bg-zinc-900 shadow-xl transition-all"
+              className="px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-950 bg-amber-400 hover:bg-amber-300 transition-colors"
             >
-              Book Wedding Date Now
+              Check availability
             </Link>
             <a
               href="tel:+92915701234"
-              className="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-amber-950 bg-white/90 hover:bg-white border border-amber-300 shadow-sm transition-all"
+              className="px-6 py-3.5 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/15 border border-white/20 transition-colors"
             >
-              Call VIP Desk (+92 91 570 1234)
+              Call us: +92 91 570 1234
             </a>
           </div>
         </div>

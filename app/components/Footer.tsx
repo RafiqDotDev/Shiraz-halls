@@ -1,5 +1,5 @@
 import React from "react";
-import { CrownIcon, PhoneIcon, MapPinIcon, MailIcon, SparklesIcon } from "./icons/Icons";
+import { CrownIcon, PhoneIcon, MapPinIcon, MailIcon, SparklesIcon, InstagramIcon } from "./icons/Icons";
 
 export const Footer: React.FC = () => {
   return (
@@ -29,7 +29,21 @@ export const Footer: React.FC = () => {
               Since 1990, Shiraz has stood as Pakistan’s pinnacle of bespoke hospitality, uniting architectural majesty, royal wedding marquees, and iconic Peshawari cuisine.
             </p>
 
-            <div className="pt-2 text-[11px] text-amber-900 flex items-center gap-2 font-semibold">
+            {/* Official Instagram Badge */}
+            <div className="pt-2">
+              <a
+                href="https://www.instagram.com/shirazgrouppk/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-amber-300 text-amber-900 hover:text-amber-950 hover:bg-amber-50 transition-colors shadow-xs"
+              >
+                <InstagramIcon className="w-4 h-4 text-red-600" />
+                <span className="font-mono text-xs font-semibold">@shirazgrouppk</span>
+                <span className="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded-full border border-amber-300/80 font-bold">Official</span>
+              </a>
+            </div>
+
+            <div className="pt-1 text-[11px] text-amber-900 flex items-center gap-2 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
               <span>Online Automated Reservations Active</span>
             </div>
@@ -63,32 +77,32 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-zinc-600">
               <li>
-                <a href="#venues" className="hover:text-amber-800 transition-colors">
+                <a href="/venues" className="hover:text-amber-900 transition-colors">
                   The Imperial Hall Collection
                 </a>
               </li>
               <li>
-                <a href="#automated-booking" className="hover:text-amber-800 transition-colors">
+                <a href="/booking" className="hover:text-amber-900 transition-colors">
                   Automated Booking Engine & Cost Estimator
                 </a>
               </li>
               <li>
-                <a href="#hall-visualizer" className="hover:text-amber-800 transition-colors">
+                <a href="/visualizer" className="hover:text-amber-900 transition-colors">
                   3D Hall & Stage Layout Visualizer
                 </a>
               </li>
               <li>
-                <a href="#menu-builder" className="hover:text-amber-800 transition-colors">
+                <a href="/catering" className="hover:text-amber-900 transition-colors">
                   Pakistani Royal Catering Menu Builder
                 </a>
               </li>
               <li>
-                <a href="#discussions" className="hover:text-amber-800 transition-colors">
+                <a href="/discussions" className="hover:text-amber-900 transition-colors">
                   Event Discussions & Majlis Community
                 </a>
               </li>
               <li>
-                <a href="#timeline-planner" className="hover:text-amber-800 transition-colors">
+                <a href="/planner" className="hover:text-amber-900 transition-colors">
                   Pakistani Wedding Checklist & Roadmap
                 </a>
               </li>
@@ -103,7 +117,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-2.5">
               <a
                 href="tel:+92915701234"
-                className="flex items-center gap-2.5 text-zinc-800 hover:text-amber-800 transition-colors font-medium"
+                className="flex items-center gap-2.5 text-zinc-800 hover:text-amber-900 transition-colors font-medium"
               >
                 <PhoneIcon className="w-4 h-4 text-amber-700" />
                 <span className="font-mono text-xs">+92 91 570 1234 / 584 1234</span>
@@ -113,7 +127,7 @@ export const Footer: React.FC = () => {
                 href="https://wa.me/923000000000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-emerald-800 hover:text-emerald-900 transition-colors font-semibold"
+                className="flex items-center gap-2.5 text-emerald-700 hover:text-emerald-800 transition-colors font-semibold"
               >
                 <span className="w-4 h-4 text-center">💬</span>
                 <span className="font-mono text-xs">+92 300 000 0000 (WhatsApp)</span>
@@ -126,8 +140,8 @@ export const Footer: React.FC = () => {
 
               <div className="pt-3">
                 <a
-                  href="#automated-booking"
-                  className="inline-block w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider text-amber-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:from-amber-400 shadow-sm"
+                  href="/booking"
+                  className="inline-block w-full text-center py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider text-amber-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:from-amber-400 shadow-md shadow-amber-400/20 transition-all cursor-pointer"
                 >
                   Book Your Wedding Date
                 </a>
@@ -138,14 +152,24 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-amber-200/80 bg-[#ebe2d3]/60 py-6 px-4">
+      <div className="border-t border-amber-200/80 bg-[#eee7dc] py-6 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-zinc-600 text-[11px]">
           <div>
             © {new Date().getFullYear()} Shiraz Hospitality Group (shiraz.pk). All rights reserved.
           </div>
           <div className="flex items-center gap-4">
-            <span className="font-serif italic text-amber-900 font-semibold">
-              The Epitome of Royal Hospitality in Pakistan
+            <a
+              href="https://www.instagram.com/shirazgrouppk/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-900 hover:text-amber-950 flex items-center gap-1 font-mono font-medium"
+            >
+              <InstagramIcon className="w-3.5 h-3.5 text-red-600" />
+              <span>@shirazgrouppk</span>
+            </a>
+            <span className="text-amber-300">|</span>
+            <span className="font-serif italic text-amber-900">
+              The Epitome of Royal Hospitality in Peshawar
             </span>
           </div>
         </div>

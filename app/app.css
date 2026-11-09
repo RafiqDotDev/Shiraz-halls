@@ -42,6 +42,27 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* Official Shiraz Red, Black & Gold Theme */
+.shiraz-red-gradient {
+  background: linear-gradient(135deg, #991b1b 0%, #dc2626 45%, #b91c1c 85%, #7f1d1d 100%);
+}
+
+.shiraz-gold-red-gradient {
+  background: linear-gradient(135deg, #f87171 0%, #f59e0b 50%, #fde047 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shiraz-red-glow {
+  box-shadow: 0 0 35px -5px rgba(185, 28, 28, 0.45);
+}
+
+.shiraz-dark-card {
+  background: #0f0f12;
+  border: 1px solid rgba(185, 28, 28, 0.4);
+  box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.8);
+}
+
 .gold-glass {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
@@ -62,7 +83,7 @@ body {
   box-shadow: 0 4px 20px -2px rgba(184, 128, 40, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
 }
 
-/* Custom Scrollbar in Light Theme */
+/* Custom Scrollbar in Light Luxury Theme */
 ::-webkit-scrollbar {
   width: 8px;
 }

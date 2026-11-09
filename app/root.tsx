@@ -72,7 +72,7 @@ export default function App() {
 
         <Link
           to="/booking"
-          className="group flex items-center gap-2 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 text-amber-950 text-xs font-bold px-4 py-2.5 rounded-full shadow-md shadow-amber-400/20 hover:scale-105 active:scale-95 transition-all"
+          className="group flex items-center gap-2 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 text-amber-950 text-xs font-bold px-4 py-2.5 rounded-full shadow-md shadow-amber-400/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
         >
           <SparklesIcon className="w-4 h-4 text-amber-950" />
           <span className="hidden sm:inline uppercase tracking-wider">Automated Booking</span>

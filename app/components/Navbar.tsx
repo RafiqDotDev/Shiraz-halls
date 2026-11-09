@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router";
-import { CrownIcon, PhoneIcon, SparklesIcon, CalendarIcon, MessageSquareIcon, UtensilsIcon } from "./icons/Icons";
+import {
+  CrownIcon,
+  PhoneIcon,
+  SparklesIcon,
+  CalendarIcon,
+  MessageSquareIcon,
+  UtensilsIcon,
+  InstagramIcon,
+} from "./icons/Icons";
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,18 +38,27 @@ export const Navbar: React.FC = () => {
       {/* Top Heritage Notice Bar */}
       <div className="bg-gradient-to-r from-amber-100/90 via-amber-50 to-amber-100/90 border-b border-amber-200 text-xs py-1.5 px-4 text-amber-950 font-medium tracking-wider">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2.5">
             <span className="flex h-2 w-2 rounded-full bg-emerald-600 animate-pulse"></span>
             <span className="font-serif italic text-amber-900 font-bold">Shiraz Hospitality Group</span>
             <span className="hidden sm:inline text-amber-300">|</span>
             <span className="hidden sm:inline text-zinc-600 font-normal">
-              Imperial Venues, Grand Marquees & Royal Peshawari Catering Since 1990
+              Imperial Venues & Royal Catering Since 1990
             </span>
+            <a
+              href="https://www.instagram.com/shirazgrouppk/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-1 text-[11px] text-amber-900 hover:text-amber-950 bg-white/80 border border-amber-300 px-2 py-0.5 rounded-full font-mono font-medium shadow-xs"
+            >
+              <InstagramIcon className="w-3 h-3 text-red-600" />
+              <span>@shirazgrouppk</span>
+            </a>
           </div>
           <div className="flex items-center gap-4 text-zinc-700">
             <a
               href="tel:+92915701234"
-              className="flex items-center gap-1.5 hover:text-amber-800 transition-colors"
+              className="flex items-center gap-1.5 hover:text-amber-900 transition-colors"
             >
               <PhoneIcon className="w-3.5 h-3.5 text-amber-700" />
               <span className="hidden md:inline font-mono text-xs font-semibold">+92 91 570 1234</span>
@@ -49,26 +66,26 @@ export const Navbar: React.FC = () => {
             </a>
             <span className="text-amber-300">|</span>
             <span className="text-emerald-800 font-mono text-[11px] bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 font-bold">
-              Peak Dates 2026/2027 Open
+              ⚡ 2026/2027 Open
             </span>
           </div>
         </div>
       </div>
 
-      {/* Main Glass Navbar */}
+      {/* Main Luxury Glass Navbar */}
       <nav
         className={`transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md border-b border-amber-200/80 py-3 shadow-md shadow-amber-900/5"
-            : "bg-white/90 backdrop-blur-sm border-b border-amber-100/60 py-4"
+            ? "bg-white/95 backdrop-blur-md border-b border-amber-200/80 py-3 shadow-md shadow-amber-900/5 text-zinc-900"
+            : "bg-white/90 backdrop-blur-sm border-b border-amber-100/60 py-4 text-zinc-900"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo & Monogram */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 p-[1.5px] shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
-              <div className="w-full h-full rounded-full bg-amber-50 flex items-center justify-center border border-amber-300">
-                <CrownIcon className="w-5 h-5 text-amber-800 group-hover:rotate-6 transition-transform" />
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+              <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                <CrownIcon className="w-5 h-5 text-amber-700 group-hover:rotate-6 transition-transform" />
               </div>
             </div>
             <div className="flex flex-col">
@@ -90,8 +107,8 @@ export const Navbar: React.FC = () => {
                 className={({ isActive }) =>
                   `text-xs font-bold uppercase tracking-wider transition-colors relative py-1.5 ${
                     isActive
-                      ? "text-amber-900 font-extrabold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-amber-600"
-                      : "text-zinc-600 hover:text-amber-800"
+                      ? "text-amber-950 font-extrabold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-amber-600"
+                      : "text-zinc-700 hover:text-amber-900"
                   }`
                 }
               >
@@ -100,11 +117,21 @@ export const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Right Action CTA */}
+          {/* Right Action CTA & Instagram */}
           <div className="hidden sm:flex items-center gap-3">
+            <a
+              href="https://www.instagram.com/shirazgrouppk/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 transition-colors"
+              title="Follow @shirazgrouppk on Instagram"
+            >
+              <InstagramIcon className="w-4 h-4 text-red-600" />
+            </a>
+
             <Link
               to="/booking"
-              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-amber-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 shadow-md shadow-amber-500/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-amber-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 shadow-md shadow-amber-500/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
             >
               <SparklesIcon className="w-3.5 h-3.5 text-amber-950" />
               <span>Automated Booking</span>
@@ -137,14 +164,23 @@ export const Navbar: React.FC = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
                   `block px-3 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors ${
-                    isActive ? "bg-amber-100 text-amber-950" : "text-zinc-700 hover:bg-amber-50 hover:text-amber-900"
+                    isActive ? "bg-amber-100 text-amber-950 font-bold" : "text-zinc-700 hover:bg-amber-50 hover:text-amber-900"
                   }`
                 }
               >
                 {link.label}
               </NavLink>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 space-y-2">
+              <a
+                href="https://www.instagram.com/shirazgrouppk/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full text-center flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-50 border border-amber-200"
+              >
+                <InstagramIcon className="w-4 h-4 text-red-600" />
+                <span>Follow @shirazgrouppk</span>
+              </a>
               <Link
                 to="/booking"
                 onClick={() => setMobileMenuOpen(false)}
