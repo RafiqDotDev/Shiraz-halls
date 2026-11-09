@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #faf4e6;
+  --color-gold-200: #f4e5c2;
+  --color-gold-300: #edd199;
+  --color-gold-400: #e2b764;
+  --color-gold-500: #d49e37;
+  --color-gold-600: #b88028;
+  --color-gold-700: #936021;
+  --color-gold-800: #784c1f;
+  --color-gold-900: #643f1c;
+
+  --color-cream-50: #fdfcfa;
+  --color-cream-100: #faf8f5;
+  --color-cream-200: #f5f0e8;
+  --color-cream-300: #ebe2d3;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #faf8f5;
+  color: #1c1917;
+  overflow-x: hidden;
+  selection-background-color: #d49e37;
+  selection-color: #ffffff;
+}
+
+/* Luxury Light Theme Gradients & Accents */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #936021 0%, #d49e37 45%, #b88028 80%, #784c1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 158, 55, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(212, 158, 55, 0.08);
+}
+
+.gold-glass-hover:hover {
+  background: #ffffff;
+  border-color: rgba(212, 158, 55, 0.5);
+  box-shadow: 0 14px 35px -10px rgba(212, 158, 55, 0.16);
+}
+
+.royal-emerald-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 158, 55, 0.22);
+  box-shadow: 0 4px 20px -2px rgba(184, 128, 40, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom Scrollbar in Light Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f0e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #d49e37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b88028;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
